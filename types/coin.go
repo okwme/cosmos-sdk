@@ -52,9 +52,9 @@ func (coin Coin) String() string {
 // validate returns an error if the Coin has a negative amount or if
 // the denom is invalid.
 func validate(denom string, amount Int) error {
-	if err := ValidateDenom(denom); err != nil {
-		return err
-	}
+	// if err := ValidateDenom(denom); err != nil {
+	// 	return err
+	// }
 
 	if amount.IsNegative() {
 		return fmt.Errorf("negative coin amount: %v", amount)
